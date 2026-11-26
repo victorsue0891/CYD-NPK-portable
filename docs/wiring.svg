@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1060" viewBox="0 0 1280 1060" role="img" aria-labelledby="title desc">
+<title id="title">CYD 與 MAX3485 3.3V 手動方向控制模組接線圖</title>
+<desc id="desc">CN1 3.3V 接 VCC，GPIO22 接 DI，P3 GPIO35 接 RO，GPIO27 接短接的 DE 與低有效 RE。全部共地。感測器另由 USB 5V 升壓至 12V。新版已燒錄至 COM8，DE／RE 修正後通訊重測通過。</desc>
+<defs>
+<marker id="pa" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#f5b85b"/></marker>
+<marker id="sa" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#6ddcca"/></marker>
+<marker id="da" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8Z" fill="#c4a2ff"/></marker>
+</defs>
+<style>
+text{font-family:'Microsoft JhengHei','Noto Sans CJK TC',sans-serif;fill:#dce6ee;font-size:18px}
+.title{font-size:28px;font-weight:700}.small{font-size:16px;fill:#a9bac8}.box{fill:#162532;stroke:#39515e;stroke-width:2}
+.power{fill:none;stroke:#f5b85b;stroke-width:3;marker-end:url(#pa)}
+.signal{fill:none;stroke:#6ddcca;stroke-width:2.5;marker-end:url(#sa)}
+.dir{fill:none;stroke:#c4a2ff;stroke-width:2.5}.dirOut{marker-end:url(#da)}
+.ground{fill:none;stroke:#8297aa;stroke-width:2;stroke-dasharray:7 5}
+.tag{fill:#f5b85b;font-weight:700}.purple{fill:#c4a2ff}
+</style>
+<rect width="1280" height="1060" fill="#0c151d"/>
+<text x="38" y="48" class="title">CYD 手持 NPK｜MAX3485 接線圖</text>
+<text x="38" y="80" class="small">2026-11-26 · VCC 接 CYD 3.3V · DE 與 RE 共用方向控制 · 功能接線示意，非排針實際順序</text>
+
+<rect class="box" x="40" y="120" width="280" height="85" rx="10"/>
+<text x="62" y="154">USB 5V 行動電源</text><text x="62" y="183" class="small">總開關／保護／分配點</text>
+<rect class="box" x="570" y="120" width="280" height="85" rx="10"/>
+<text x="592" y="154">DC-DC 升壓模組</text><text x="592" y="183" class="small">5V → 12V，額定電流待測</text>
+<path class="power" d="M320 160H570"/><text x="416" y="145" class="tag">5V</text>
+<path class="power" d="M180 205V300"/><text x="195" y="255" class="tag">5V → USB 入口</text>
+<path class="power" d="M850 160H1120V300"/><text x="930" y="145" class="tag">12V（只供感測器）</text>
+
+<rect class="box" x="40" y="300" width="300" height="430" rx="10"/>
+<text x="60" y="335">ESP32-2432S028 / CYD</text><text x="60" y="362" class="small">ILI9341＋XPT2046</text>
+<text x="60" y="397" class="tag">CN1 3.3V</text>
+<text x="60" y="456">CN1 IO22 → UART TX</text>
+<text x="60" y="506">P3 IO35 ← UART RX</text>
+<text x="60" y="580" class="purple">CN1 IO27 → DIR</text>
+<text x="60" y="640" class="small">IO35 僅輸入，適合接 RO</text>
+<text x="60" y="670" class="small">USB UART0 保留燒錄／除錯</text>
+<text x="60" y="710" class="small">CN1 或 P3：GND</text>
+
+<rect class="box" x="570" y="300" width="280" height="430" rx="10"/>
+<text x="590" y="335">TTL ↔ RS485 / MAX3485</text><text x="590" y="362" class="small">3.3V · 半雙工 · 手動控制方向</text>
+<text x="590" y="397" class="tag">VCC：3.3V</text>
+<text x="590" y="456">DI（輸入）</text><text x="590" y="506">RO（輸出）</text>
+<text x="590" y="561" class="purple">DE（高有效）</text>
+<text x="590" y="601" class="purple">RE（/RE，低有效）</text>
+<text x="810" y="456">A</text><text x="810" y="506">B</text>
+<text x="590" y="650" class="small">DE 與 RE 在模組端短接</text>
+<text x="590" y="680" class="small">不要將兩腳固定接高或懸空</text>
+<text x="590" y="710" class="small">GND</text>
+
+<rect class="box" x="1000" y="300" width="240" height="430" rx="10"/>
+<text x="1020" y="335">NPK 感測器（RS485）</text><text x="1020" y="362" class="small">供電範圍：9–18V</text>
+<text x="1020" y="397" class="tag">紅：電源正（12V）</text>
+<text x="1020" y="456">綠：RS485 A</text><text x="1020" y="506">黃：RS485 B</text>
+<text x="1020" y="640" class="small">線色以實物標籤為準</text>
+<text x="1020" y="670" class="small">A/B 使用雙絞線</text>
+<text x="1020" y="710" class="small">黑：電源負／GND</text>
+
+<path class="power" d="M340 390H570"/>
+<path class="signal" d="M340 450H570"/>
+<path class="signal" d="M570 500H340"/>
+<path class="dir" d="M340 575H535V555"/>
+<path class="dir dirOut" d="M535 555H570"/>
+<path class="dir dirOut" d="M535 575V595H570"/>
+<circle cx="535" cy="575" r="4" fill="#c4a2ff"/>
+<!-- RO pull-up: GPIO35 has no internal pull-up and RO is high-Z during TX. -->
+<path d="M485 390V410M485 438V500" fill="none" stroke="#f5b85b" stroke-width="2"/>
+<rect x="479" y="410" width="12" height="28" fill="#162532" stroke="#f5b85b" stroke-width="2"/>
+<circle cx="485" cy="390" r="4" fill="#f5b85b"/><circle cx="485" cy="500" r="4" fill="#6ddcca"/>
+<text x="500" y="429" class="small">10kΩ</text>
+<text x="355" y="530" class="small">RO 外接上拉至 3.3V</text>
+<!-- DIR pull-down defaults to receive during reset. -->
+<path class="dir" d="M425 575V630M425 664V765"/>
+<rect x="419" y="630" width="12" height="34" fill="#162532" stroke="#c4a2ff" stroke-width="2"/>
+<circle cx="425" cy="575" r="4" fill="#c4a2ff"/>
+<text x="442" y="653" class="small">10kΩ</text>
+<text x="442" y="700" class="small">下拉至 GND</text>
+
+<path class="signal" marker-start="url(#sa)" d="M850 450H1000"/>
+<path class="signal" marker-start="url(#sa)" d="M850 500H1000"/>
+<text x="880" y="425" class="small">RS485</text>
+<path class="ground" d="M40 180H20V765H1120V730M190 730V765M710 730V765M710 205V240H945V765"/>
+<circle cx="190" cy="765" r="4" fill="#8297aa"/><circle cx="425" cy="765" r="4" fill="#8297aa"/><circle cx="710" cy="765" r="4" fill="#8297aa"/><circle cx="945" cy="765" r="4" fill="#8297aa"/>
+<text x="40" y="800" class="small">共地：CYD、MAX3485、非隔離升壓器 IN−／OUT−、感測器電源負。交叉線無圓點表示不相接。</text>
+
+<rect x="40" y="822" width="1200" height="82" rx="8" fill="#231d35"/>
+<text x="60" y="851" class="purple">方向控制：GPIO27 = LOW → 接收（DE=0、/RE=0）；HIGH → 傳送（DE=1、/RE=1）。</text>
+<text x="60" y="882" class="small">建議加圖中兩個 10kΩ 電阻；若模組已內建等效上拉／下拉，請先核對電路。</text>
+<text x="40" y="941" class="tag">韌體已更新：TX = GPIO22、RX = GPIO35、DE／RE 方向控制 = GPIO27。</text>
+<text x="40" y="972" class="small">2026-11-26 COM8 重測通過：DE／RE 修正後收到有效回覆。韌體送完最後停止位元後切回接收。</text>
+<text x="40" y="1003" class="small">端接電阻依此模組及探針實際電路確認，不沿用舊模組 R16 說明；12V 不接 MAX3485 VCC 或 CYD。</text>
+<text x="40" y="1034" class="small">USB 5V → CYD／12V 升壓器；CYD 3.3V → MAX3485。新版韌體與本圖一致；COM8 已更新，NPK 通訊已測通。</text>
+</svg>

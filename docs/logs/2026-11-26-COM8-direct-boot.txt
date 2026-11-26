@@ -1,0 +1,23 @@
+  0.00s Direct NPK boot test; COM8; firmware SHA256=3e7ad8f656e24b0ee11ebc962ed3fb19578ccac42e869aa78de5f3641dba64b5
+  0.11s ets Jul 29 2019 12:21:46
+  0.11s
+  0.11s rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+  0.11s configsip: 0, SPIWP:0xee
+  0.12s clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+  0.12s mode:DIO, clock div:2
+  0.12s load:0x3fff0030,len:1184
+  0.12s load:0x40078000,len:13232
+  0.12s load:0x40080400,len:3028
+  0.12s entry 0x400805e4
+  0.58s New measurement: allow 10 s for sensor response; verify stability in soil.
+  0.58s Touch calibration loaded; opening NPK screen.
+  0.59s CYD NPK: h=pause/resume, r=new measurement, c=touch calibration.
+ 10.64s RX: 01 03 06 00 00 00 00 00 00 21 75
+ 10.66s N=0 P=0 K=0 mg/kg; uptime_ms=10370
+ 12.62s RX: 01 03 06 00 00 00 00 00 00 21 75
+ 12.62s N=0 P=0 K=0 mg/kg; uptime_ms=12352
+ 14.62s RX: 01 03 06 00 00 00 00 00 00 21 75
+ 14.62s N=0 P=0 K=0 mg/kg; uptime_ms=14350
+ 16.66s RX: 01 03 06 00 00 00 00 00 00 21 75
+ 16.66s N=0 P=0 K=0 mg/kg; uptime_ms=16377
+ 17.27s SUMMARY {"direct_npk_boot": true, "valid_readings": 4, "timeouts": 0, "invalid_replies": 0, "crash_indicators": 0}

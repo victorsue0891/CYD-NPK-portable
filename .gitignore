@@ -1,0 +1,20 @@
+.pio/
+.venv/
+.vscode/
+__pycache__/
+build/
+assets/fonts/*.otf
+docs/reference/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.local
+
+# Editor / OS temporary files
+*.swp
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db

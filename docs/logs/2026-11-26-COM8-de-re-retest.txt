@@ -1,0 +1,30 @@
+   0.00s COM8 retest after user corrected DE/RE; 115200 baud; existing firmware, no reflash
+   0.00s PHASE remeasure_and_poll
+   0.02s New measurement: allow 10 s for sensor response; verify stability in soil.
+  10.06s RX: 01 03 06 00 00 00 00 00 00 21 75
+  10.08s N=0 P=0 K=0 mg/kg; uptime_ms=60057
+  12.06s RX: 01 03 06 00 00 00 00 00 00 21 75
+  12.08s N=0 P=0 K=0 mg/kg; uptime_ms=62058
+  14.11s RX: 01 03 06 00 00 00 00 00 00 21 75
+  14.11s N=0 P=0 K=0 mg/kg; uptime_ms=64098
+  16.11s RX: 01 03 06 00 00 00 00 00 00 21 75
+  16.11s N=0 P=0 K=0 mg/kg; uptime_ms=66095
+  18.11s RX: 01 03 06 00 00 00 00 00 00 21 75
+  18.11s N=0 P=0 K=0 mg/kg; uptime_ms=68096
+  20.14s RX: 01 03 06 00 00 00 00 00 00 21 75
+  20.16s N=0 P=0 K=0 mg/kg; uptime_ms=70136
+  22.14s RX: 01 03 06 00 00 00 00 00 00 21 75
+  22.14s N=0 P=0 K=0 mg/kg; uptime_ms=72133
+  24.14s RX: 01 03 06 00 00 00 00 00 00 21 75
+  24.16s N=0 P=0 K=0 mg/kg; uptime_ms=74136
+  25.17s PHASE pause
+  29.34s PHASE resume_and_poll
+  29.36s New measurement: allow 10 s for sensor response; verify stability in soil.
+  39.39s RX: 01 03 06 00 00 00 00 00 00 21 75
+  39.39s N=0 P=0 K=0 mg/kg; uptime_ms=89381
+  41.39s RX: 01 03 06 00 00 00 00 00 00 21 75
+  41.39s N=0 P=0 K=0 mg/kg; uptime_ms=91382
+  43.42s RX: 01 03 06 00 00 00 00 00 00 21 75
+  43.42s N=0 P=0 K=0 mg/kg; uptime_ms=93405
+  45.39s RX: 01 03 06 00 00 00 00 00 00 21 75
+  45.39s SUMMARY {"valid_readings": 11, "timeouts": 0, "invalid_replies": 0, "pause_poll_events": 0, "resume_valid_readings": 3, "crash_indicators": 0}

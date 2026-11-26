@@ -1,0 +1,27 @@
+   0.00s MAX3485 firmware smoke test; COM8; 115200 baud; TX22 RX35 DIR27
+   0.00s firmware.bin SHA256=7f6e6b8784b8b4ec431b62d12a7e0902353066bc7e7694bd9786eaf2ff426b00
+   0.09s PHASE boot_and_poll
+   0.11s ets Jul 29 2019 12:21:46
+   0.11s
+   0.11s rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+   0.11s configsip: 0, SPIWP:0xee
+   0.11s clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+   0.11s mode:DIO, clock div:2
+   0.11s load:0x3fff0030,len:1184
+   0.11s load:0x40078000,len:13232
+   0.11s load:0x40080400,len:3028
+   0.11s entry 0x400805e4
+   0.58s New measurement: allow 10 s for sensor response; verify stability in soil.
+   0.58s [   298][E][Preferences.cpp:50] begin(): nvs_open failed: NOT_FOUND
+   0.58s CYD NPK: h=pause/resume, r=new measurement, c=touch calibration.
+  11.28s RS485 timeout; check power, A/B and address.
+  13.30s RS485 timeout; check power, A/B and address.
+  15.31s RS485 timeout; check power, A/B and address.
+  17.30s RS485 timeout; check power, A/B and address.
+  19.34s RS485 timeout; check power, A/B and address.
+  20.19s PHASE pause
+  24.31s PHASE remeasure
+  24.31s New measurement: allow 10 s for sensor response; verify stability in soil.
+  35.05s RS485 timeout; check power, A/B and address.
+  37.05s RS485 timeout; check power, A/B and address.
+  38.50s SUMMARY {"boot_banner": true, "valid_readings": 0, "timeouts": 7, "invalid_replies": 0, "pause_poll_events": 0, "remeasure_ack": true, "crash_indicators": 0}
